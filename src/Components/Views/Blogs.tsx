@@ -1,13 +1,12 @@
 import React from "react";
 
-import img1 from "../assets/img/blog1.jpg";
-import img2 from "../assets/img/blog2.jpg";
-import img3 from "../assets/img/blog3.jpg";
-import img4 from "../assets/img/blog4.jpg";
-import img5 from "../assets/img/blog5.jpg";
-import img6 from "../assets/img/blog6.jpg";
-import Button from "../Layouts/Button";
-import BlogCard from "../Layouts/BlogCard";
+import img1 from "../../assets/img/blog1.jpg";
+import img2 from "../../assets/img/blog2.jpg";
+import img3 from "../../assets/img/blog3.jpg";
+import img4 from "../../assets/img/blog4.jpg";
+import img5 from "../../assets/img/blog5.jpg";
+import img6 from "../../assets/img/blog6.jpg";
+import BlogCard from "../../Layouts/BlogCard";
 
 const Blogs = () => {
   return (

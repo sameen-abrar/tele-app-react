@@ -4,8 +4,8 @@ import { RiMicroscopeLine } from "react-icons/ri";
 
 import { MdHealthAndSafety } from "react-icons/md";
 import { FaHeartbeat } from "react-icons/fa";
-import Button from "../Layouts/Button";
-import ServicesCard from "../Layouts/ServicesCard";
+import Button from "../../Layouts/Button";
+import ServicesCard from "../../Layouts/ServicesCard";
 
 const Services = () => {
   const icon1 = (
