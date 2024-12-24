@@ -6,7 +6,7 @@ extend: {
     },
   },
 
-  WellnessVista
+  TeleHealth
 
   #Home Section 
   Empowering Health Choices for a Vibrant Life Your Trusted..

@@ -105,13 +105,13 @@ const Doctors = () => {
           <button
           // arrow keys
             className=" bg-[#e4e7f1] text-backgroundColor px-4 py-2 rounded-lg active:bg-[#97a1c8]"
-            onClick={() => slider.current.slickPrev()}
+            onClick={() => (slider.current as any)?.slickPrev()}
           >
             <FaArrowLeft size={25} />
           </button>
           <button
             className=" bg-[#e4e7f1] text-backgroundColor px-4 py-2 rounded-lg active:bg-[#97a1c8]"
-            onClick={() => slider.current.slickNext()}
+            onClick={() => (slider.current as any)?.slickNext()}
           >
             <FaArrowRight size={25} />
           </button>

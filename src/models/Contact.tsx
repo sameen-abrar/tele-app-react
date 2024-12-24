@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../Layouts/Button";
 
-const Contact = ({ closeForm }) => {
+const Contact = ({ closeForm }: { closeForm: () => void }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
       <div className="popup-form absolute mt-12 text-black">

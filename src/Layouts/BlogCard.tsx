@@ -1,6 +1,6 @@
 import React from "react";
 
-const BlogCard = ({ img, headlines }) => {
+const BlogCard = ({ img, headlines }: { img: string; headlines: string }) => {
   return (
     <div className=" w-full lg:w-1/4 p-2 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] space-y-2 rounded-lg cursor-pointer hover:scale-105 transition duration-300 ease-in-out">
       <img
