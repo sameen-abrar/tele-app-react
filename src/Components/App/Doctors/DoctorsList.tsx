@@ -21,6 +21,15 @@ const doctorData = [
     availability: "Tue",
     profilePic: "https://images.pexels.com/photos/11927589/pexels-photo-11927589.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", // Replace with actual image
   },
+  {
+    id: 3,
+    name: "Dr. Zaheen",
+    specialization: "Oncologist",
+    price: "Tk. 500",
+    tags: ["Heart", "Health"],
+    availability: "Wed",
+    profilePic: "https://images.pexels.com/photos/12800455/pexels-photo-12800455.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", // Replace with actual image
+  },
 ];
 
 function DoctorsList() {
