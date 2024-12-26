@@ -23,14 +23,18 @@ function Layout() {
 
   return (
     <>
-      {isHomePage ? (
-        <HomeNavbar />
-      ) : isDoctorsListPage ? (
-        <AppNavbar />
-      ) : (
-        <AppNavbar />
-      )}
-      <Outlet />
+      <div>
+        {isHomePage ? (
+          <HomeNavbar />
+        ) : isDoctorsListPage ? (
+          <AppNavbar />
+        ) : (
+          <AppNavbar />
+        )}
+      </div>
+      <main className="pt-16">
+        <Outlet />
+      </main>
     </>
   );
 }

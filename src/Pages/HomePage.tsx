@@ -10,7 +10,7 @@ import HomeNavbar from '../Components/HomeNavbar'
 export default function HomePage() {
   return (
     <div>
-        <HomeNavbar />
+        {/* <HomeNavbar /> */}
       <main>
         <div id="home">
           <Home></Home>
