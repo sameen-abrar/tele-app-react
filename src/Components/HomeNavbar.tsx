@@ -3,6 +3,7 @@ import { Link } from "react-scroll";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Contact from "../models/Contact";
 import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../Router/AppRouter";
 
 const HomeNavbar = () => {
   const [menu, setMenu] = useState(false);
@@ -86,7 +87,7 @@ const HomeNavbar = () => {
           <div className="hidden lg:flex">
             <button
               className="bg-brightColor text-white px-4 py-2 rounded-md hover:bg-hoverColor transition duration-300 ease-in-out"
-              onClick={() => navigate("/doctors/all")}
+              onClick={() => navigate(ROUTES.APP_DOCTORSLIST)}
             >
               Book Now
             </button>
@@ -169,9 +170,9 @@ const HomeNavbar = () => {
           <div className=" lg:hidden">
             <button
               className="bg-brightColor text-white px-4 py-2 rounded-md hover:bg-hoverColor transition duration-300 ease-in-out"
-              onClick={openForm}
+              onClick={() =>  {navigate(ROUTES.APP_DOCTORSLIST)}}
             >
-              Contact Us
+              Book Now
             </button>
           </div>
         </div>

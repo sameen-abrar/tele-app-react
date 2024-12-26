@@ -11,37 +11,8 @@ import { AppRouter } from "./Router/AppRouter";
 
 function App() {
   return (
-    // <>
-    //  <Navbar></Navbar>
-    //  <main>
-    //   <div id='home'><Home></Home></div>
-    //   <div id='about'><About></About></div>
-    //   <div id='services'><Services></Services></div>
-    //   <div id='doctors'><Doctors></Doctors></div>
-    //   <div id='blogs'><Blogs></Blogs></div>
-    //  </main>
-    //  <Footer></Footer>
-    // </>
     <MantineProvider>
       <AppRouter />
-      {/* <main>
-        <div id="home">
-          <Home></Home>
-        </div>
-        <div id="about">
-          <About></About>
-        </div>
-        <div id="services">
-          <Services></Services>
-        </div>
-        <div id="doctors">
-          <Doctors></Doctors>
-        </div>
-        <div id="blogs">
-          <Blogs></Blogs>
-        </div>
-      </main>
-      <Footer></Footer> */}
     </MantineProvider>
   );
 }

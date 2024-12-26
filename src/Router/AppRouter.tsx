@@ -1,4 +1,9 @@
-import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  Outlet,
+  RouterProvider,
+  useLocation,
+} from "react-router-dom";
 import HomeNavbar from "../Components/HomeNavbar";
 import Home from "../Components/Views/Home";
 import About from "../Components/Views/About";
@@ -10,42 +15,63 @@ import DoctorsListPage from "../Pages/DoctorsListPage";
 import AppNavbar from "../Components/AppNavbar";
 
 function Layout() {
+  const location = useLocation();
+
+  // Determine which navbar to show based on the current path
+  const isHomePage = location.pathname === "/";
+  const isDoctorsListPage = location.pathname === "/doctors/all";
+
   return (
     <>
-      <AppNavbar />
-      <Outlet /> {/* Renders the content of the current route */}
+      {isHomePage ? (
+        <HomeNavbar />
+      ) : isDoctorsListPage ? (
+        <AppNavbar />
+      ) : (
+        <AppNavbar />
+      )}
+      <Outlet />
     </>
   );
 }
+export const ROUTES = {
+  HOME: "/",
+  APP_DOCTORSLIST: "/app/doctors/all",
+};
 
 const router = createBrowserRouter([
   {
     element: <Layout />,
     children: [
-        {
-            path: "/",
-            element: <HomePage/>,
-        },
-        {
-            path: "/about",
-            element: <About/>,
-        },
-        {
-            path: "/services",
-            element: <Services/>,
-        },
-        {
-            path: "/doctors",
-            element: <Doctors/>,
-        },
-        {
-            path: "/blogs",
-            element: <Blogs/>,
-        },
-        {
-            path: "/doctors/all",
-            element: <DoctorsListPage/>,
-        },
+      {
+        path: "/",
+        element: <HomePage />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/services",
+        element: <Services />,
+      },
+      {
+        path: "/doctors",
+        element: <Doctors />,
+      },
+      {
+        path: "/blogs",
+        element: <Blogs />,
+      },
+      {
+        path: "/app",
+        children: [
+          {
+            path: "doctors/all",
+            element: <DoctorsListPage />,
+          },
+        ],
+      },
     ],
   },
 ]);
