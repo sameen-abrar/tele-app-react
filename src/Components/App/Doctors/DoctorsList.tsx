@@ -14,7 +14,7 @@ const doctorData = [
   },
   {
     id: 2,
-    name: "Dr. Ayesha",
+    name: "Dr. Robin",
     specialization: "Cardiologist",
     price: "Tk. 500",
     tags: ["Heart", "Health"],
@@ -45,62 +45,62 @@ function DoctorsList() {
           <Card
             shadow="sm"
             radius="md"
-            className="hover:shadow-lg transition-shadow flex justify-between items-center p-4 border border-gray-200"
+            className="hover:shadow-lg transition-shadow flex flex-row items-center p-4 border border-gray-200"
           >
-            <Group>
-              {/* Profile Picture */}
+            {/* Image Column */}
+            <div className="flex-shrink-0 w-1/5 flex justify-center items-center">
               <Image
                 src={doctor.profilePic}
                 alt={doctor.name}
-                width={80}
-                height={80}
+                width={150}
+                height={150}
                 radius="50%"
                 className="border rounded-full"
               />
-              {/* Doctor Info */}
-              <div>
-                <Text size="xl" className="text-lg">
-                  {doctor.name}{" "}
-                  <span className="text-green-500">&#9679;</span>
-                </Text>
-                <Text size="sm" color="dimmed">
-                  {doctor.specialization}
-                </Text>
-                <Group mt={6}>
-                  {doctor.tags.map((tag) => (
-                    <Badge
-                      key={tag}
-                      className="text-blue-500 border-blue-500"
-                      variant="outline"
-                    >
-                      {tag}
-                    </Badge>
-                  ))}
-                </Group>
-                <Badge
-                  className="mt-2 bg-green-100 text-green-700"
-                  radius="sm"
-                  variant="filled"
-                >
-                  {doctor.availability}
-                </Badge>
-              </div>
-            </Group>
-            {/* Price and Buttons */}
-            <div className="flex flex-col items-end">
-              <Text size="lg" className="mb-2 text-gray-600">
+            </div>
+            
+            {/* Text Column */}
+            <div className="flex-grow w-3/5 px-4">
+              <Text size="xl" className="text-lg font-semibold">
+                {doctor.name}
+              </Text>
+              <Text size="sm" color="dimmed">
+                {doctor.specialization}
+              </Text>
+              <Group mt={6}>
+                {doctor.tags.map((tag) => (
+                  <Badge
+                    key={tag}
+                    className="text-blue-500 border-blue-500"
+                    variant="outline"
+                  >
+                    {tag}
+                  </Badge>
+                ))}
+              </Group>
+              <Badge
+                className="mt-2 bg-green-100 text-green-700"
+                variant="filled"
+              >
+                {doctor.availability}
+              </Badge>
+            </div>
+
+            {/* Price and Buttons Column */}
+            <div className="w-1/5 flex flex-col items-end">
+              <Text size="lg" className="mb-2 text-gray-600 font-semibold">
                 {doctor.price}
               </Text>
-              <div className="flex gap-2">
+              <div className="flex flex-col gap-2">
                 <Button
                   className="bg-blue-500 hover:bg-blue-600 text-white"
-                  size="xs"
+                  size="md"
                 >
                   View Profile
                 </Button>
                 <Button
                   className="bg-sky-500 hover:bg-sky-600 text-white"
-                  size="xs"
+                  size="md"
                 >
                   Book Now
                 </Button>
